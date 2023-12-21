@@ -1,0 +1,10 @@
+menuconfig LIBNBENCH
+	bool "libnbench -  Linux/Unix nbench (previously known as BYTE's Native Mode Benchmarks)"
+	default n
+	select LIBMUSL
+
+if LIBNBENCH
+config LIBNBENCH_MAIN_FUNCTION
+	bool "Provide main function"
+	default y
+endif
