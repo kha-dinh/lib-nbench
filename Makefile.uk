@@ -47,19 +47,19 @@ LIBNBENCH_SRCS-y += $(LIBNBENCH_EXTRACTED)/sysspec.c
 # Prepare
 ################################################################################
 $(LIBNBENCH_BUILD)/pointer.h:
-	$(call verbose_cmd,POINTER,libnbench:  $(notdir $@), \
+	$(call verbose_cmd,PREPARE,libnbench:  $(notdir $@), \
 				cd $(LIBNBENCH_EXTRACTED) && \
 				make pointer.h && $(TOUCH) $@)
 UK_PREPARE += $(LIBNBENCH_BUILD)/pointer.h
 
 $(LIBNBENCH_BUILD)/sysinfo.c:
-	$(call verbose_cmd,POINTER,libnbench:  $(notdir $@), \
+	$(call verbose_cmd,PREPARE,libnbench:  $(notdir $@), \
 				cd $(LIBNBENCH_EXTRACTED) && \
 				make sysinfo.c && $(TOUCH) $@)
 UK_PREPARE += $(LIBNBENCH_BUILD)/sysinfo.c
 
 $(LIBNBENCH_BUILD)/sysinfoc.c:
-	$(call verbose_cmd,POINTER,libnbench:  $(notdir $@), \
+	$(call verbose_cmd,PREPARE,libnbench:  $(notdir $@), \
 				cd $(LIBNBENCH_EXTRACTED) && \
 				make sysinfoc.c && $(TOUCH) $@)
 UK_PREPARE += $(LIBNBENCH_BUILD)/sysinfoc.c
